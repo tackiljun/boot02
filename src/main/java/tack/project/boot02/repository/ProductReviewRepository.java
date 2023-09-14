@@ -1,5 +1,10 @@
 package tack.project.boot02.repository;
 
-public interface ProductReviewRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tack.project.boot02.entity.ProductReview;
+
+
+public interface ProductReviewRepository extends JpaRepository<ProductReview, Long> {
     
 }
