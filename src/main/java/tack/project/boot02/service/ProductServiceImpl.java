@@ -14,6 +14,8 @@ import tack.project.boot02.dto.ProductDTO;
 import tack.project.boot02.dto.ProductListDTO;
 import tack.project.boot02.entity.Product;
 import tack.project.boot02.repository.ProductRepository;
+import tack.project.boot02.util.FileUploader;
+
 
 @Service
 @RequiredArgsConstructor
