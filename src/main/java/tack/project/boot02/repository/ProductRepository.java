@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import tack.project.boot02.entity.Product;
 import tack.project.boot02.repository.search.ProductSearch;
 
+
 public interface ProductRepository extends JpaRepository<Product, Long>, ProductSearch {
 
     //////////////////////////////////////////////////////////////////////////
