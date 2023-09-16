@@ -1,0 +1,20 @@
+package tack.project.boot02.repository;
+
+import org.springframework.data.jpa.repository.EntityGraph;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import tack.project.boot02.entity.FileBoard;
+import tack.project.boot02.repository.search.FileBoardSearch;
+
+
+public interface FileBoardRepository extends JpaRepository<FileBoard, Long>, FileBoardSearch {
+
+    ///////////////////////////////////////////////////////
+    // 1개값을 가져오는 JPQL.
+    @EntityGraph(attributePaths = {"images"})
+    @Query("select b from FileBoard b where b.bno = :bno")
+    FileBoard selectOne(@Param("bno") Long bno);
+    
+}
