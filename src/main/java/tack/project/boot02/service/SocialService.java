@@ -6,6 +6,7 @@ import jakarta.transaction.Transactional;
 @Transactional
 public interface SocialService {
 
+    //////////////////////////////////////
     String getKakaoEmail(String authCode);
     
 }
