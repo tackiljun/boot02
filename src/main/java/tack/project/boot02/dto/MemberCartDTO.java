@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 public class MemberCartDTO {
 
     ///////////////////////
-    private  Long cno;
-    private  String email;
+    private Long cno;
+    private String email;
     private Long pno;
     
 }
