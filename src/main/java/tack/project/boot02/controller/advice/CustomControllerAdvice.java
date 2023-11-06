@@ -19,7 +19,7 @@ public class CustomControllerAdvice {
     //////////////////////////////////////////////////////////////////////////////////////////////
     @ExceptionHandler(MemberServiceImpl.MemberLoginException.class)
     public ResponseEntity<Map<String, String>> handleException(
-        MemberServiceImpl.MemberLoginException e) {
+    MemberServiceImpl.MemberLoginException e) {
 
         log.info("--------------------");
         log.info(e.getMessage());
