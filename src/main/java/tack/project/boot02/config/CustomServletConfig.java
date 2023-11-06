@@ -17,16 +17,16 @@ import tack.project.boot02.controller.interceptor.JWTInterceptor;
 @EnableWebMvc
 public class CustomServletConfig implements WebMvcConfigurer {
 
-    //////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
     private final JWTInterceptor jwtInterceptor;
 
-    //////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
         registry.addInterceptor(jwtInterceptor)
-            .addPathPatterns("/api/**")
-            .excludePathPatterns("/api/member/login", "/api/member/refresh");
+        .addPathPatterns("/api/**")
+        .excludePathPatterns("/api/member/login", "/api/member/refresh");
 
     }
     
