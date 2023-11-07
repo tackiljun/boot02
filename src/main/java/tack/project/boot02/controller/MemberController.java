@@ -83,7 +83,7 @@ public class MemberController {
     ////////////////////////////////////////////////////////////////////////////////////////////
     @RequestMapping("refresh")
     public Map<String, String> refresh(
-        @RequestHeader("Authorization") String accessToken, String refreshToken ) {
+    @RequestHeader("Authorization") String accessToken, String refreshToken ) {
 
         log.info("Refresh.... access: " + accessToken);
         log.info("Refresh... refresh: " + refreshToken);
