@@ -36,7 +36,6 @@ public class JWTInterceptor implements HandlerInterceptor {
         }
 
         try {
-
             String headerStr = request.getHeader("Authorization");
 
             if(headerStr == null || headerStr.length() < 7) {
@@ -50,7 +49,6 @@ public class JWTInterceptor implements HandlerInterceptor {
 
             log.info("result: " + claims);
         } catch(Exception e) {
-
             response.setContentType("application/json");
 
             //JSON 문자열은 {"키(key)" : "값(value)"}.
@@ -65,7 +63,6 @@ public class JWTInterceptor implements HandlerInterceptor {
             response.getOutputStream().write(str.getBytes());
 
             return false;
-
         }
 
         log.info("------------------------------");
