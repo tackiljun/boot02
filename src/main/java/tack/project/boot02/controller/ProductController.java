@@ -90,8 +90,8 @@ public class ProductController {
     public Map<String, Long> modify(ProductDTO productDTO) {
 
         log.info("----------modify----------");
-        log.info("----------modify----------");
-        log.info("----------modify----------");
+        // log.info("----------modify----------");
+        // log.info("----------modify----------");
         log.info(productDTO);
 
         // 기존파일에 새파일까지 추가배열.
