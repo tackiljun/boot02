@@ -94,7 +94,6 @@ public class MemberController {
 
         Map<String, Object> claims = jwtUtil.validateToken(refreshToken);
 
-
         return Map.of(
             "accessToken" , jwtUtil.generate(claims, 1), 
             "refreshToken", jwtUtil.generate(claims, 60*24));
