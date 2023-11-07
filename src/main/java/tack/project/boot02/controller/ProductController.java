@@ -67,7 +67,7 @@ public class ProductController {
         log.info("----------PNO----------");
 
         log.info("PNO.........." + pno);
-        log.info("PNO.........." + pno);
+        // log.info("PNO.........." + pno);
 
         return service.readOne(pno);
 
