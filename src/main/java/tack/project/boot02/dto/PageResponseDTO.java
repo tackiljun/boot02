@@ -11,15 +11,10 @@ public class PageResponseDTO<E> {
 
     //////////////////////////////////////////////////////////////////////////////////////////
     private List<E> dtoList;
-
     private long totalCount;
-
     private List<Integer> pageNums;
-
     private boolean prev, next;
-
     private PageRequestDTO requestDTO;
-
     private int page, size, start, end;
 
     //////////////////////////////////////////////////////////////////////////////////////////
