@@ -65,7 +65,6 @@ public class ProductController {
     public ProductDTO getOne(@PathVariable("pno") Long pno) {
 
         log.info("----------PNO----------");
-
         log.info("PNO.........." + pno);
         // log.info("PNO.........." + pno);
 
@@ -78,7 +77,9 @@ public class ProductController {
     public Map<String, Long> delete(@PathVariable("pno") Long pno) {
 
         log.info("PNO.........." + pno);
+
         service.remove(pno);
+
         log.info("PNO.........." + pno);
 
         return Map.of("result", pno);
