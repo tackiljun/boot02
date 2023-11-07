@@ -14,7 +14,7 @@ import lombok.ToString;
 @AllArgsConstructor
 public class FileBoardListDTO {
 
-    /////////////////////
+    ///////////////////////
     // 게시판 번호.
     private Long bno;
     //게시판 제목.
