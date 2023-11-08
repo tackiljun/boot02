@@ -18,9 +18,10 @@ import lombok.ToString;
 @AllArgsConstructor
 public class Member {
 
-    ///////////////////////////////////
+    ////////////////////////////////////
     @Id
     private String email; // 아이디역할.
+
     private String pw; // 패스워드.
     private String nickname;
     private boolean admin;
