@@ -17,9 +17,8 @@ import lombok.ToString;
 @AllArgsConstructor
 public class ProductImage {
 
-    /////////////////////
+    //////////////////////
     private String fname;
-
     private int ord;
     
 }
