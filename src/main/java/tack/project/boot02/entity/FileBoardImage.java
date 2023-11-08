@@ -18,7 +18,7 @@ import lombok.ToString;
 @AllArgsConstructor
 public class FileBoardImage {
 
-    ///////////////////////////////////////////////////
+    ////////////////////////////////////////////////////
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long imgno;
@@ -27,7 +27,7 @@ public class FileBoardImage {
     private String fname;
     private int ord;
 
-    public void changeOrd (int ord) {
+    public void changeOrd(int ord) {
         this.ord = ord;
     }
     // 게시판에서 이미지 순번정하는 메소드.
