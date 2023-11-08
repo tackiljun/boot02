@@ -23,7 +23,7 @@ import lombok.ToString;
 @Table(name = "member_cart", indexes = @Index(columnList = "email, cno"))
 public class MemberCart {
 
-    ////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cno;
