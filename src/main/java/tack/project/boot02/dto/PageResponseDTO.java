@@ -37,9 +37,7 @@ public class PageResponseDTO<E> {
         int realEnd = (int) (Math.ceil(totalCount/(double)size));
 
         this.end = tempEnd > realEnd ? realEnd: tempEnd;
-
         this.next = (this.end * this.size) < totalCount;
-
         // pageNums 처리하자.
         this.pageNums = IntStream.rangeClosed(start, end).boxed().toList();
         
