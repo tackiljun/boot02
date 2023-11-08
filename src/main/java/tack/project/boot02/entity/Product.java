@@ -45,10 +45,8 @@ public class Product {
     // 상품추가 메소드.
     public void addImage(String name) {
 
-        ProductImage pImage = ProductImage.builder()
-                                .fname(name)
-                                .ord(images.size())
-                                .build();
+        ProductImage pImage = 
+        ProductImage.builder().fname(name).ord(images.size()).build();
 
         images.add(pImage);
 
