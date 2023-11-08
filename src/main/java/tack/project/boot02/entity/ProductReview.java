@@ -28,9 +28,7 @@ public class ProductReview {
     private Long rno;
 
     private String content;
-
     private String reviewer;
-
     private int score;
 
     ////////////////////////////////////////////////////
