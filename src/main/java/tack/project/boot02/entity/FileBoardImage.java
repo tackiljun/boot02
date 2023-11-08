@@ -24,9 +24,7 @@ public class FileBoardImage {
     private Long imgno;
 
     private String uuid;
-
     private String fname;
-
     private int ord;
 
     public void changeOrd (int ord) {
