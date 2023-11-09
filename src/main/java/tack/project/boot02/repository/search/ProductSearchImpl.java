@@ -41,8 +41,7 @@ public class ProductSearchImpl extends QuerydslRepositorySupport implements Prod
         int pageNum = pageRequestDTO.getPage() <= 0? 0: pageRequestDTO.getPage() -1;
 
         Pageable pageable = PageRequest.of(
-            pageNum,
-            pageRequestDTO.getSize(),
+            pageNum,pageRequestDTO.getSize(),
             Sort.by("pno").descending());
 
         this.getQuerydsl().applyPagination(pageable, query);
