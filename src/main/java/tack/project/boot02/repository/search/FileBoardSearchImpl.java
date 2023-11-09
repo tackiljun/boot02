@@ -32,14 +32,13 @@ public class FileBoardSearchImpl extends QuerydslRepositorySupport implements Fi
         // Q로 선언.
         QFileBoard board = QFileBoard.fileBoard;
         QFileBoardImage boardImage = QFileBoardImage.fileBoardImage;
-
         // query 선언 select.
         JPQLQuery<FileBoard> query = from(board);
+
         // left outer join.
         // 같은 조건이 없으므로 on조건을 사용할 수 없다.
         // 그래서 join을 할 수 없다.
         query.leftJoin(board.images, boardImage);
-
         query.where(boardImage.ord.eq(0));
 
         // boardImage의 ord가 0인걸로 where.
