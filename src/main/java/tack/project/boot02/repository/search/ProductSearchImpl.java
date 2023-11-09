@@ -47,15 +47,15 @@ public class ProductSearchImpl extends QuerydslRepositorySupport implements Prod
         this.getQuerydsl().applyPagination(pageable, query);
 
         JPQLQuery<ProductListDTO> dtoQuery = query.select(
-            Projections.bean(ProductListDTO.class,
-            product.pno,
-            product.pname,
-            product.price,
-            productImage.fname)
+            Projections.bean(
+                ProductListDTO.class, 
+                product.pno, 
+                product.pname, 
+                product.price, 
+                productImage.fname)
         );
 
         List<ProductListDTO> dtoList = dtoQuery.fetch();
-
         long totalCount = dtoQuery.fetchCount();
 
         return new PageResponseDTO<>(dtoList, totalCount, pageRequestDTO);
