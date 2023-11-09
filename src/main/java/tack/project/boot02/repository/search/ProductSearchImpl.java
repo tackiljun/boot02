@@ -69,19 +69,18 @@ public class ProductSearchImpl extends QuerydslRepositorySupport implements Prod
         QProduct product = QProduct.product;
         QProductImage productImage = QProductImage.productImage;
         QProductReview review = QProductReview.productReview;
-
         JPQLQuery<Product> query = from(product);
+
         query.leftJoin(product.images, productImage);
         query.leftJoin(review).on(review.product.eq(product));
-
         query.where(productImage.ord.eq(0));
         query.where(product.delFlag.eq(Boolean.FALSE));
 
         int pageNum = pageRequestDTO.getPage() <= 0? 0: pageRequestDTO.getPage() -1;
 
-        Pageable pageable = PageRequest.of(
-            pageNum,
-            pageRequestDTO.getSize(),
+        Pageable pageable = 
+        PageRequest.of(
+            pageNum, pageRequestDTO.getSize(), 
             Sort.by("pno").descending());
 
         this.getQuerydsl().applyPagination(pageable, query);
