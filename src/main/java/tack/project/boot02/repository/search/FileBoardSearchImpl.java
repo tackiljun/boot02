@@ -63,12 +63,12 @@ public class FileBoardSearchImpl extends QuerydslRepositorySupport implements Fi
         //     log.info(fb.getImages());
         // });
 
-        JPQLQuery<FileBoardListDTO> listQuery =  query.select(
-            Projections.bean(FileBoardListDTO.class,
-                board.bno,
-                board.title,
-                boardImage.uuid,
-                boardImage.fname)); // 목록
+        JPQLQuery<FileBoardListDTO> listQuery = query.select(
+        Projections.bean(FileBoardListDTO.class,
+        board.bno,
+        board.title,
+        boardImage.uuid,
+        boardImage.fname)); // 목록
 
         List<FileBoardListDTO> list = listQuery.fetch();
         long totalCount = listQuery.fetchCount();
