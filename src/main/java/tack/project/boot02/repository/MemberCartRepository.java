@@ -11,7 +11,7 @@ import tack.project.boot02.entity.MemberCart;
 
 public interface MemberCartRepository extends JpaRepository<MemberCart, Long> {
 
-    //////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
     @Query("select mc from MemberCart mc where mc.email = :email order by mc.cno asc")
     List<MemberCart> selectCart(@Param("email") String email);
     
