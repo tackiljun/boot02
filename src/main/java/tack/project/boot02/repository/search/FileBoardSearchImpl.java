@@ -50,9 +50,9 @@ public class FileBoardSearchImpl extends QuerydslRepositorySupport implements Fi
 
         // 페이징처리.
         Pageable pageable = PageRequest.of(
-            pageNum,
-            pageRequestDTO.getSize(), 
-            Sort.by("bno").descending());
+        pageNum,
+        pageRequestDTO.getSize(), 
+        Sort.by("bno").descending());
 
         // 페이징.
         this.getQuerydsl().applyPagination(pageable, query);
