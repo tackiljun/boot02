@@ -11,7 +11,7 @@ import tack.project.boot02.repository.search.ProductSearch;
 
 public interface ProductRepository extends JpaRepository<Product, Long>, ProductSearch {
 
-    //////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
     // 상세보기 JPQL.
     @EntityGraph(attributePaths = "images")
     @Query("select p from Product p where p.delFlag = false and p.pno = :pno")
