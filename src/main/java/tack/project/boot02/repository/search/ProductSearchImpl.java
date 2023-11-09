@@ -99,7 +99,6 @@ public class ProductSearchImpl extends QuerydslRepositorySupport implements Prod
         );
 
         List<ProductListDTO> dtoList = dtoQuery.fetch();
-
         long totalCount = dtoQuery.fetchCount();
 
         return new PageResponseDTO<>(dtoList, totalCount, pageRequestDTO);
