@@ -45,7 +45,7 @@ public class MemberServiceImpl implements MemberService {
             if(!member.getPw().equals(pw)) {
                 throw  new MemberLoginException("Password Incorrect");
             }
-            
+
             //패스워드는 안나가게 해야되므로 Service에서 처리해준다.
             memberDTO = MemberDTO.builder()
             .email(member.getEmail())
@@ -55,7 +55,7 @@ public class MemberServiceImpl implements MemberService {
             .build();
 
         } catch(Exception e) {
-            throw  new MemberLoginException(e.getMessage());
+            throw new MemberLoginException(e.getMessage());
         }
 
         return memberDTO;
