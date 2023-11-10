@@ -106,8 +106,10 @@ public class ProductServiceImpl implements ProductService {
         product.changePrice(productDTO.getPrice());
 
         // product에서 기존 이미지 목록들을 가져온다. -- 나중에 비교해서 삭제.
-        List<String> oldFileNames = product.getImages().stream().map(pi
-            -> pi.getFname()).collect(Collectors.toList());
+        List<String> oldFileNames = product.getImages()
+        .stream()
+        .map(pi -> pi.getFname())
+        .collect(Collectors.toList());
 
         // 이미지들은 clearImages( ) 한 후에.
         product.clearImages();
@@ -127,8 +129,8 @@ public class ProductServiceImpl implements ProductService {
         // 기존 파일들 중에 productDTO.getImages() 에 없는 파일들을 찾기.
         List<String> newFiles = productDTO.getImages();
         List<String> wantDeleteFiles = oldFileNames.stream()
-            .filter(f -> newFiles.indexOf(f) == -1)
-            .collect(Collectors.toList());
+        .filter(f -> newFiles.indexOf(f) == -1)
+        .collect(Collectors.toList());
 
         log.info("--------------------");
         log.info(wantDeleteFiles);
