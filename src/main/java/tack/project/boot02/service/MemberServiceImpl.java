@@ -74,7 +74,7 @@ public class MemberServiceImpl implements MemberService {
             Member member = result.get();
 
             log.info("----------==========service==========----------");
-            
+
             MemberDTO dto = MemberDTO.builder()
             .email(member.getEmail())
             .nickname(member.getNickname())
@@ -87,16 +87,17 @@ public class MemberServiceImpl implements MemberService {
 
         // 데이터베이스에 존재하지 않는 이메일이라면.
         Member socialMember = Member.builder()
-            .email(email)
-            .pw(UUID.randomUUID().toString())
-            .nickname("SOCIAL_MEMBER")
-            .build();
+        .email(email)
+        .pw(UUID.randomUUID().toString())
+        .nickname("SOCIAL_MEMBER")
+        .build();
+
         memberRepository.save(socialMember);
 
         MemberDTO dto = MemberDTO.builder()
-            .email(socialMember.getEmail())
-            .nickname(socialMember.getNickname())
-            .build();
+        .email(socialMember.getEmail())
+        .nickname(socialMember.getNickname())
+        .build();
 
         return dto;
         //return null;
