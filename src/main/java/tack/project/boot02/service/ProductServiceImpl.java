@@ -60,13 +60,13 @@ public class ProductServiceImpl implements ProductService {
         Product product = productRepository.selectOne(pno);
 
         ProductDTO dto = ProductDTO.builder()
-                .pno(product.getPno())
-                .pname(product.getPname())
-                .price(product.getPrice())
-                .pdesc(product.getPdesc())
-                .images(product.getImages().stream().map(pi
-                        -> pi.getFname()).collect(Collectors.toList()))
-                .build();
+        .pno(product.getPno())
+        .pname(product.getPname())
+        .price(product.getPrice())
+        .pdesc(product.getPdesc())
+        .images(product.getImages().stream().map(
+            pi -> pi.getFname()).collect(Collectors.toList()))
+        .build();
 
         return dto;
 
