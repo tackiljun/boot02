@@ -16,11 +16,8 @@ public interface ProductService {
 
     /////////////////////////////////////////////////////////////////
     Long register(ProductDTO productDTO);
-
     ProductDTO readOne(Long pno);
-
     void remove(Long pno);
-
     void modify(ProductDTO productDTO);
     
 }
