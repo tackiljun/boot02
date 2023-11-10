@@ -71,10 +71,10 @@ public class MemberServiceImpl implements MemberService {
             Member member = result.get();
             log.info("----------==========service==========----------");
             MemberDTO dto = MemberDTO.builder()
-                .email(member.getEmail())
-                .nickname(member.getNickname())
-                .admin(member.isAdmin())
-                .build();
+            .email(member.getEmail())
+            .nickname(member.getNickname())
+            .admin(member.isAdmin())
+            .build();
 
             return dto;
 
