@@ -72,7 +72,9 @@ public class MemberServiceImpl implements MemberService {
         if(result.isPresent()) {
 
             Member member = result.get();
+
             log.info("----------==========service==========----------");
+            
             MemberDTO dto = MemberDTO.builder()
             .email(member.getEmail())
             .nickname(member.getNickname())
