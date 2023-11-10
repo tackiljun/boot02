@@ -100,6 +100,7 @@ public class ProductServiceImpl implements ProductService {
         Optional<Product> result = productRepository.findById(productDTO.getPno());
 
         Product product = result.orElseThrow();
+        
         // 기본 정보들 수정.
         product.changePname(productDTO.getPname());
         product.changePdesc(productDTO.getPdesc());
