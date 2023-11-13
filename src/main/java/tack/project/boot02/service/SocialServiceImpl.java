@@ -41,6 +41,7 @@ public class SocialServiceImpl implements  SocialService {
         log.info(getUser);
 
         String accessToken = getAccessToken(authCode);
+        
         log.info("==========accessToken==========: " + accessToken);
 
         String email = getEmailFromAccessToken(accessToken);
