@@ -98,7 +98,6 @@ public class ProductServiceImpl implements ProductService {
 
         // 기존의 Product를 로딩.
         Optional<Product> result = productRepository.findById(productDTO.getPno());
-
         Product product = result.orElseThrow();
         
         // 기본 정보들 수정.
