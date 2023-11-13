@@ -72,7 +72,7 @@ public class SocialServiceImpl implements  SocialService {
         .queryParam("code", authCode)
         .build(true);
 
-        ResponseEntity<LinkedHashMap> response =restTemplate.exchange(
+        ResponseEntity<LinkedHashMap> response = restTemplate.exchange(
             uriComponents.toString(), HttpMethod.POST, entity, LinkedHashMap.class);
 
         log.info("----------==========----------");
