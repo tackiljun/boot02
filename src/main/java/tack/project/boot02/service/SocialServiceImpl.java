@@ -100,11 +100,10 @@ public class SocialServiceImpl implements  SocialService {
 
         headers.add("Authorization", "Bearer " + accessToken);
         headers.add("Content-Type","application/x-www-form-urlencoded");
-        
+
         HttpEntity<String> entity = new HttpEntity<>(headers);
-
         UriComponents uriBuilder = UriComponentsBuilder.fromHttpUrl(getUser).build();
-
+        
         ResponseEntity<LinkedHashMap> response = restTemplate.exchange(
             uriBuilder.toString(),
             HttpMethod.GET,
