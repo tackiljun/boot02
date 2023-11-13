@@ -45,7 +45,7 @@ public class SocialServiceImpl implements  SocialService {
         log.info("==========accessToken==========: " + accessToken);
 
         String email = getEmailFromAccessToken(accessToken);
-        
+
         log.info("==========email==========: " + email);
 
         return email;
@@ -58,9 +58,10 @@ public class SocialServiceImpl implements  SocialService {
 
         String accessToken = null;
         RestTemplate restTemplate = new RestTemplate();
-
         HttpHeaders headers = new HttpHeaders();
+
         headers.add("Content-Type","application/x-www-form-urlencoded;charset=utf-8");
+        
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         // react API의 param을 쿼리param으로 바꿔주는것.
