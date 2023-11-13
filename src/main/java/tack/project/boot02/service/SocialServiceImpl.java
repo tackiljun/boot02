@@ -61,16 +61,16 @@ public class SocialServiceImpl implements  SocialService {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Type","application/x-www-form-urlencoded;charset=utf-8");
-        
+
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         // react API의 param을 쿼리param으로 바꿔주는것.
         UriComponents uriComponents = UriComponentsBuilder.fromHttpUrl(tokenURL)
-            .queryParam("grant_type","authorization_code")
-            .queryParam("client_id",clientId)
-            .queryParam("redirect_uri", redirectURI)
-            .queryParam("code", authCode)
-            .build(true);
+        .queryParam("grant_type","authorization_code")
+        .queryParam("client_id",clientId)
+        .queryParam("redirect_uri", redirectURI)
+        .queryParam("code", authCode)
+        .build(true);
 
         ResponseEntity<LinkedHashMap> response =restTemplate.exchange(
             uriComponents.toString(), HttpMethod.POST, entity, LinkedHashMap.class);
