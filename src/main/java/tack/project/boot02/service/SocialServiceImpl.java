@@ -17,7 +17,7 @@ import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Service
-public class SocialServiceImpl implements  SocialService {
+public class SocialServiceImpl implements SocialService {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Value("${org.zerock.kakao.token_url}")
