@@ -46,7 +46,6 @@ public class FileUploader {
 
         // forLoop.
         for (String fname: fileNames) {
-
             File original = new File(path, fname);
             File thumb = new File(path, "s_"+fname);
 
@@ -54,7 +53,6 @@ public class FileUploader {
                 thumb.delete();
             }
             original.delete();
-
         }
 
     }
