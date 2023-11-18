@@ -84,7 +84,6 @@ public class FileUploader {
                 // 썸네일이 필요하다면.
                 if(makeThumbnail) {
                     File thumbOutFile = new File(path, "s_"+saveFileName);
-
                     Thumbnailator.createThumbnail(saveFile, thumbOutFile, 200, 200);
                 }
                 
@@ -95,6 +94,7 @@ public class FileUploader {
             }    
 
         }
+        
         return uploadFileNames;
         
     }
