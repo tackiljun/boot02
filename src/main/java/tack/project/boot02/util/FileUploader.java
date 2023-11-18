@@ -77,7 +77,7 @@ public class FileUploader {
             File saveFile = new File(path, saveFileName);
 
             try (InputStream in = mFile.getInputStream();
-                 OutputStream out = new FileOutputStream(saveFile);) {
+             OutputStream out = new FileOutputStream(saveFile);) {
 
                 FileCopyUtils.copy(in, out);
 
