@@ -74,7 +74,6 @@ public class FileUploader {
             String originalFileName = mFile.getOriginalFilename();
             String uuid = UUID.randomUUID().toString();
             String saveFileName = uuid+"_"+originalFileName;
-
             File saveFile = new File(path, saveFileName);
 
             try (InputStream in = mFile.getInputStream();
