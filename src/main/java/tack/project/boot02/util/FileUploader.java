@@ -71,7 +71,6 @@ public class FileUploader {
 
         // loop.
         for (MultipartFile mFile : files) {
-
             String originalFileName = mFile.getOriginalFilename();
             String uuid = UUID.randomUUID().toString();
             String saveFileName = uuid+"_"+originalFileName;
