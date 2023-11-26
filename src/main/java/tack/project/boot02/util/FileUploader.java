@@ -41,7 +41,7 @@ public class FileUploader {
     public void removeFiles(List<String> fileNames) {
 
         if(fileNames == null || fileNames.size() == 0) {
-            throw  new UploadException(("Files do not axist"));
+            throw new UploadException(("Files do not axist"));
         }
 
         // forLoop.
