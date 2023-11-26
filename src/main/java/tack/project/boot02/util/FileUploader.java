@@ -70,7 +70,7 @@ public class FileUploader {
         log.info(files);
 
         // loop.
-        for (MultipartFile mFile : files) {
+        for(MultipartFile mFile : files) {
             String originalFileName = mFile.getOriginalFilename();
             String uuid = UUID.randomUUID().toString();
             String saveFileName = uuid+"_"+originalFileName;
