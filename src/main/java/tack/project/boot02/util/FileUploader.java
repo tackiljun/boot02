@@ -88,7 +88,7 @@ public class FileUploader {
                 
                 uploadFileNames.add(saveFileName);
                 
-            } catch (Exception e) {
+            } catch(Exception e) {
                 throw new UploadException("Upload Fail:" + e.getMessage());
             }    
 
