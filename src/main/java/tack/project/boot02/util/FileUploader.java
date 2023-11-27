@@ -76,10 +76,8 @@ public class FileUploader {
             String saveFileName = uuid+"_"+originalFileName;
             File saveFile = new File(path, saveFileName);
 
-            try(
-                InputStream in = mFile.getInputStream();
-                OutputStream out = new FileOutputStream(saveFile);) {
-
+            try(InputStream in = mFile.getInputStream();
+             OutputStream out = new FileOutputStream(saveFile);) {
                 FileCopyUtils.copy(in, out);
 
                 // 썸네일이 필요하다면.
